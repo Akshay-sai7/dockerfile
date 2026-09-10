@@ -1,12 +1,10 @@
 class Hello{
 public static void main(String[] args){
-String name=System.getenv("USERNAME_VAR");
-if (name!=null){
-System.out.println("hello devops engineer" + " " + name);
-  System.out.println("Welcome to jenkins");
-}
-else{
-System.out.println("Enviornmental variable is not set!");
+if(args.length>0){
+String name=args[0];
+System.out.println("Hello"+name);
+}else{
+System.out.println("No name provided!");
 }
 }
 }
